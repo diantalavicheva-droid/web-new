@@ -1,0 +1,431 @@
+[file name]: contact-en.html
+[file content begin]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Accounting Partnership</title>
+  <meta name="description" content="Contact our accounting practices for professional consultations and services.">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-light: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --card: #020617;
+      --border: #1f2933;
+    }
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg), var(--bg-light));
+      color: var(--text);
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0.95) 70%);
+      backdrop-filter: blur(12px) saturate(180%);
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      max-width: none; 
+      margin: 0;
+    }
+
+    .logo img {
+      height: 90px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      height: 3px;
+      width: 100%;
+      background-color: var(--text);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      transition: max-height 0.3s ease;
+    }
+
+    nav ul li {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li img {
+      width: 28px;
+      height: 17.5px;
+      object-fit: cover;
+      margin-right: 0.2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    section {
+      padding: 4rem 1rem;
+    }
+
+    h1,h2,h3 { 
+      line-height:1.25; 
+      margin-top:0;
+      text-align: center;
+    }
+    
+    h1 { 
+      font-size:2.1rem; 
+      font-weight: 700;
+      background: linear-gradient(90deg, #38bdf8, #7dd3fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    h2 { 
+      font-size:1.6rem; 
+      margin-bottom:1rem;
+      font-weight: 400;
+    }
+    
+    h3 { 
+      font-size:1.1rem; 
+      font-weight: 400;
+    }
+    
+    p { 
+      color: var(--muted); 
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta {
+      display:inline-block;
+      margin-top:1.5rem;
+      padding:0.7rem 1.2rem;
+      border-radius:6px;
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color:#020617;
+      font-weight:600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+    }
+    .cta:hover {
+      background: linear-gradient(135deg, #7dd3fc, #38bdf8);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
+      text-decoration: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      gap:2rem;
+      margin-top:2rem;
+      justify-items: center;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card {
+      background: var(--card);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:2rem;
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
+    }
+
+    .calendar-link {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: var(--card);
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      border-top:1px solid rgba(56, 189, 248, 0.2);
+      padding:2rem 1rem;
+      font-size:0.85rem;
+      color: var(--muted);
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(15, 23, 42, 0.95) 70%);
+      backdrop-filter: blur(12px) saturate(180%);
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin:0;
+      text-align: center;
+    }
+
+    .contact-info {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+
+    /* Мобилни стилове */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+      
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0.98) 70%);
+        backdrop-filter: blur(15px) saturate(180%);
+        padding: 1rem;
+        border-bottom: 1px solid var(--border);
+        max-height: 0;
+        overflow: hidden;
+      }
+      
+      nav ul.active {
+        display: flex;
+        max-height: 500px;
+      }
+      
+      nav ul li {
+        margin: 0.5rem 0;
+        width: 100%;
+        justify-content: center;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.4rem;
+      }
+      
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .card {
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo img {
+        height: 70px;
+      }
+      
+      h1 {
+        font-size: 1.6rem;
+      }
+      
+      .card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    
+    <div class="menu-toggle" id="mobile-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <ul id="nav-menu">
+      <li><a href="index-en.html">Home</a></li>
+      <li><a href="about-en.html">About</a></li>
+      <li><a href="services-en.html">Services</a></li>
+      <li><a href="contact-en.html">Contact</a></li>
+      <li>
+        <a href="#" onclick="changeLang('bg')"><img src="bg.png" alt="BG">BG</a> &nbsp;|&nbsp;
+        <a href="#" onclick="changeLang('en')"><img src="us.png" alt="US">US</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section>
+  <div class="container">
+    <h1>Choose an Accountant</h1>
+    <p>Please select which accounting practice you wish to contact. Each inquiry is processed directly by the respective practice, which takes on the commitment to the client.</p>
+    
+    <div class="grid">
+      <div class="card">
+        <h2>Accounting Practice "DT BUSINESS SOLUTIONS" LTD</h2>
+        <div class="contact-info">
+          <p><strong>Company:</strong> "DT BUSINESS SOLUTIONS" LTD</p>
+          <p><strong>Phone:</strong> <a href="tel:+359878476656">+359 878 476 656</a></p>
+          <p><strong>E-mail:</strong> <a href="mailto:desy_i_t@yahoo.com">desy_i_t@yahoo.com</a></p>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h2>Accounting Practice "NorDia INVEST" EOOD</h2>
+        <div class="contact-info">
+          <p><strong>Company:</strong> "NorDia INVEST" EOOD</p>
+          <p><strong>Phone:</strong> <a href="tel:+359883374600">+359 883 374 600</a></p>
+          <p><strong>E-mail:</strong> <a href="mailto:office@nordiainvest.org">office@nordiainvest.org</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="calendar-link">
+      <h2>Book a Free Online Meeting</h2>
+      <p>(about 30 min.) where we can get to know each other, talk and answer your questions</p>
+      <a href="https://calendly.com/office-nordiainvest/30min" target="_blank" class="cta">Book Now</a>
+    </div>
+    
+    <div class="card" style="max-width: 800px; margin: 0 auto;">
+      <h3>Important Information</h3>
+      <p>This website presents a partnership between independent accounting practices. Each accounting service contract is concluded directly with the respective practice and does not create joint liability between the partners.</p>
+      <p>Each accounting practice operates independently and bears sole responsibility for the services provided to its clients.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>
+      This website presents a partnership between independent accounting practices. 
+      <a href="contact-en.html">Contact</a> | 
+      <a href="privacy-en.html">Privacy Policy</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  function changeLang(lang) {
+    const current = window.location.pathname.split("/").pop();
+    if(lang === 'en') {
+      if(current === 'index.html') window.location.href = 'index-en.html';
+      else if(current === 'about.html') window.location.href = 'about-en.html';
+      else if(current === 'services.html') window.location.href = 'services-en.html';
+      else if(current === 'contact.html') window.location.href = 'contact-en.html';
+      else if(current === 'privacy.html') window.location.href = 'privacy-en.html';
+    } else if(lang === 'bg') {
+      if(current === 'index-en.html') window.location.href = 'index.html';
+      else if(current === 'about-en.html') window.location.href = 'about.html';
+      else if(current === 'services-en.html') window.location.href = 'services.html';
+      else if(current === 'contact-en.html') window.location.href = 'contact.html';
+      else if(current === 'privacy-en.html') window.location.href = 'privacy.html';
+    }
+  }
+  
+  if (localStorage.getItem('preferredLang')) {
+    const lang = localStorage.getItem('preferredLang');
+    if (lang === 'bg' && window.location.pathname.includes('-en.html')) {
+      changeLang('bg');
+    }
+  }
+  
+  document.querySelectorAll('a[onclick^="changeLang"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const lang = this.onclick.toString().match(/changeLang\('(\w+)'\)/)[1];
+      localStorage.setItem('preferredLang', lang);
+    });
+  });
+
+  // Мобилно меню
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+    
+    mobileMenu.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+    
+    // Затваряне на менюто при клик извън него
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('nav')) {
+        navMenu.classList.remove('active');
+        mobileMenu.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+[file content end]
